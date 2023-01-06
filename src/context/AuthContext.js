@@ -61,6 +61,7 @@ const signin =
         type: 'signin',
         payload: response.data.token,
       });
+      navigate('TrackList');
     } catch (err) {
       console.log(err);
       dispatch({

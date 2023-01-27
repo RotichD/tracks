@@ -8,9 +8,13 @@ const Map = () => {
     state: { currentLocation, locations },
   } = useContext(LocationContext);
 
+
   if (!currentLocation) {
     return <ActivityIndicator size='large' style={{ marginTop: 200 }} />;
   }
+
+  console.log(locations)
+
 
   return (
     <MapView
@@ -19,11 +23,6 @@ const Map = () => {
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
       }}
-      // region={{
-      //   ...currentLocation.coords,
-      //   latitudeDelta: 0.01,
-      //   longitudeDelta: 0.01,
-      // }}
       style={styles.map}
     >
       <Circle
